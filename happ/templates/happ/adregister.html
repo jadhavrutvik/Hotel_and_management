@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adregister</title>
+    
+</head>
+<body>
+    <center><div style="background-color: antiquewhite; border-radius: 20px; height: 500px;width: 500px;padding-top: 40px;">
+        <h2 style="text-align: center;text-decoration: underline;">Registration Form</h2>
+        <form method="post">
+            {%csrf_token%}
+                {{d.as_p}}
+   <a href="/adregister/"> <button style="margin-top: 20px; border-radius: 20px;height: 40px;width: 80px;" type="submit">Register</button></a>
+   <br>
+         
+
+</form>
+    </div></center>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ulogin</title>
+</head>
+<body>
+    <center><div style="background-color: antiquewhite; border-radius: 20px; height: 500px;width: 500px;padding-top: 40px;">
+        <h3 style="text-align: center;">Login Form</h3>
+        <form method="post">
+            {%csrf_token%}
+            <label >User name :</label><input type="text" placeholder="enter username" style="margin-left: 19px;" name="name">
+            <br><br>
+            <label>password</label><input type="password" placeholder="enter password" style="margin-left: 20px;" name="password">
+            <br><br>
+
+
+    
+         <button style="margin-top: 20px; border-radius: 20px;height: 40px;width: 80px;" class="b" type="submit">Login</button>
+         <br>
+         <br>
+        <a href="/uregister/">Don't have account</a>
+
+            
+        </form>
+        </div></center>
+    
+</body>
+</html>

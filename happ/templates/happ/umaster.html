@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}
+        {%endblock%}
+    </title>
+    <link rel="stylesheet" href="{%static 'css/hotel.css'%}">
+    <style>
+        table,tr,td,th{
+            border: 2px solid black;
+        }
+        .b:hover{
+            cursor: pointer;
+            background-color: bisque;
+            size: 20px;
+        }
+        body{
+            min-height: 100vh;
+        }
+        .f{
+            position: sticky;
+            top: 100%;
+        }
+        li:hover{
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="width: 100%;margin-top: 0px;height: 50px;">
+        <h1 style="text-align: center;font-size: 50px;"><marquee style="text-decoration: dotted;" > HOTEL RJ</marquee></h1>
+    
+</div>
+    
+
+            <hr>
+            <nav>
+                <ul style="list-style-type: none;">
+                    <li style="float: left;"><a href="/uhome/" style="text-decoration: none;">Home</a></li>
+                    <li style="float: left; margin-left: 20px;"><a href="/uorderitem/" style="text-decoration: none;">Your Orders</a></li>
+                    <li style="float: left; margin-left: 30px;"><a href="//" style="text-decoration: none;">Display</a></li>
+                    <li style="float: left; margin-left: 1150px;"><a href="/" style="text-decoration: none;">Logout</a></li>
+                </ul>
+                
+
+
+
+            </nav>
+            <br>
+            <hr>
+            <div style='height:1000px; width:100%;'>
+          <div style="height:1000px ;width: 20%;float: left;background-color: rgb(14, 18, 19);">
+            <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading1">ROOMS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading2">FOOD</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#scrollspyHeading3">Rooms</a></li>
+                      <li><a class="dropdown-item" href="#scrollspyHeading4">Food</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                     
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                <h4 id="scrollspyHeading1">ROOMS</h4>
+                <p style="color: white;">Food is very nice</p>
+                <h4 id="scrollspyHeading2">FOOD</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading3">Third heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading4">Fourth heading</h4>
+                <p>...</p>
+               
+              </div>
+            </div>
+            <div style=" height: 1000px;width: 80%;margin: 0px;padding: 0px;float: left;">
+                {%block text%}
+
+                {%endblock%} 
+            </div>
+            <footer style="padding:10px;width:100%;background-color: rgb(53, 36, 36); float:inline-start;margin-bottom:0px" >
+                <ul style="list-style-type: none; margin-left: 300PX;margin-top: 30PX;text-align: justify;">
+                    <li style="height: 40px; float: left;margin-top: 0px;margin-left: 300px;">
+                       <a href="/ureview/" style="text-decoration: none; color: white;"> Review</a>
+                    </li>
+                    <li style="height: 40px; float: left;margin-top: 0px;margin-left: 70px;">
+                        <a href="" style="text-decoration: none; color: white;float: left;"> Photos</a>
+                    </li>
+                    <li style="height: 40px; float: left;margin-left: 70px;margin-top: 0px;"><a href="" style="text-decoration: none; color: white;float: left;"> about</a></li>
+                </ul>
+            
+            </footer>
+        </div>
+        
+
+      
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,44 @@
+{%extends 'happ/admaster.html'%}
+
+{%block title%}
+Update
+{%endblock%}
+
+{%block text%}
+<h1 style="text-align: center;">Add product</h1>
+
+<table style="margin-left:300px;">
+    <thead>
+        <tr>
+            <th>No</th><th>Image</th><th>price</th><th>description</th>
+        </tr>
+              
+    </thead>
+            
+            <tbody>
+                <form method="post">
+                    {%csrf_token%}
+                
+                    <tr>
+                        <td><input type="number" name="no" value="{{d.no}}"></td>
+                        
+                        <td><input type="text" name="name" value="{{d.name}}"></td>
+                        <td><input type="image" name="image" value="{{d.image}}"></td>
+                        <td><input type="number" name="price" value="{{d.price}}"></td>
+                        <td><input type="text" name="details" value="{{d.details}}"></td>
+                    </tr>
+                      
+                    <button type="submit" >update</button>
+                  
+
+                </form>
+                
+            </tbody>
+         
+ 
+ 
+</table>
+
+
+
+{%endblock%}

@@ -1,0 +1,56 @@
+{%extends 'happ/umaster.html'%}
+
+
+{% block title%}
+    display
+                    
+        {%endblock%}
+
+        {%block text%}
+        <div style="height:1000px; width:100%;"  class="back1">
+            <h2 style="margin-top:0px; padding-top:20px;margin-left:500px">your order</h2>
+
+        <div style="height: 200px;width: 100%;border: 2px solid black; ">
+            {%for i in  u%}
+
+            <div style="height: 100%;width: 10%; background-color:bisque; margin: 0px;float: left;">
+               
+                    <h3 style="padding-left: 20px;">{{i.no}}</h3>
+                    <h5 style="margin:10px;">Name:</h5>
+                    <p class="fs-5" style="margin-left: 30px;font-weight: 100;">{{i.name}}</p>
+                
+            </div>
+            <div style="height: 99%;width: 59%; background-color: chartreuse;float: left;border: 2px solid black;">
+                <img src="/media/{{i.image}}" style="height: 200px;width: 710px;"></div>
+            <br>
+            <div style="height: 100%; width: 20%;float: left;">
+              <div style="height: 20%;width: 100%; "> 
+                 <h3 style="float: left; padding-left: 20px;">price:-</h3>
+                           
+                <h3 style="float: left;">{{i.price}}</h3></div>
+                
+                    <div style="height: 80%;width: 100%;">              
+                    <label style="margin-right: 100px; margin-bottom: 100px;">Details:-</label>
+                <p>{{i.details}}</p>
+            </div>
+           
+
+            </div>
+            <div style="height: 99%;width: 9.6%; float: left; border: 2px solid black;">
+               <a href="/uitem/"> <button class="b" style="margin-top: 30%;margin-left: 20px; border-radius: 20px;height: 40px;width: 80px;">
+                AddMore</button></a>
+               <a href="/udelete/{{i.id}}"> <button class="b" type="button" style="margin-top: 50px; margin-left: 20px; border-radius: 20px;height: 40px;width: 70px; " >
+                Remove</button></a>
+
+            </div>
+            {%endfor%}
+        
+        </div>
+    </div>
+        
+       
+        <br>
+
+        
+       
+        {%endblock%}

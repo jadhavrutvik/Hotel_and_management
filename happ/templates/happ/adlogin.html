@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adlogin</title>
+    <link rel="stylesheet" href="{%static 'css/b.css'%}">
+    
+</head>
+<body>
+    <center><div style="background-color: antiquewhite; border-radius: 20px; height: 500px;width: 500px;padding-top: 40px;">
+        <h3 style="text-align: center;">Login Form</h3>
+        <form method="post">
+            {%csrf_token%}
+
+            {{form.as_p}}
+         <button style="margin-top: 20px; border-radius: 20px;height: 40px;width: 80px;" class="b" type="submit">Login</button>
+         <br>
+         <br>
+        <a href="/adregister/">Don't have account</a>
+
+            
+        </form>
+        </div></center>
+</body>
+</html>

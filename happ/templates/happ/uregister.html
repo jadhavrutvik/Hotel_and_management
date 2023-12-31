@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uregister</title>
+</head>
+<body>
+    <center><div style="background-color: antiquewhite; border-radius: 20px; height: 500px;width: 500px;padding-top: 40px;">
+        <form method="post">
+            {%csrf_token%}
+                 <label>Name :</label><input type="text" style="margin-left: 50px;" name="name" >
+
+                <br>
+                <br>
+                <label for="">password :</label><input type="password" style="margin-left: 35px;" name="password" value="enter correct password">
+                <br>
+                <br>
+               <label >conform password :</label><input type="password" name="copassword" >
+                <br><br>
+    <button style="margin-top: 20px; border-radius: 20px;" type="submit">Register</button>
+    
+   <br>
+         
+
+</form>
+    </div></center>
+</body>
+</html>

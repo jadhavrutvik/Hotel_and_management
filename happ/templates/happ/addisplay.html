@@ -1,0 +1,47 @@
+{%extends 'happ/admaster.html'%}
+
+
+{% block title%}
+    display
+                    
+        {%endblock%}
+
+        {%block text%}
+        {%for i in d%}
+        <div style="height: 200px;width: 100%;border: 2px solid black;">
+
+            <div style="height: 100%;width: 10%; background-color:bisque; margin: 0px;float: left;">
+               
+                    <h3 style="padding-left: 20px;">{{i.no}}</h3>
+                    <h3 style="margin:10px;">Name:</h3>
+                    <h3 style="margin: 10px;">{{i.name}}</h3>
+                
+            </div>
+            <div style="height: 100%;width: 60%;float: left;"><img src="/media/{{i.image}}" style="height: 100%;width: 720px;"></div>
+            <div style="height: 100%; width: 20%;float: left;">
+              <div style="height: 20%;width: 100%;background-color: aliceblue; "> 
+                 <h3 style="float: left; padding-left: 20px;">price:-</h3>
+                           
+                <h3 style="float: left;">{{i.price}}</h3></div>
+                
+                    <div style="height: 80%;width: 100%;background-color: aliceblue;">              
+                    <label style="margin-right: 100px; margin-bottom: 100px;">Details:-</label>
+                <p>{{i.details}}</p>
+            </div>
+           
+
+            </div>
+            <div style="height: 99%;width: 9.7%; float: left; border: 2px solid black;">
+               <a href="/update/{{i.id}}"> <button class="b" style="margin-top: 50%;margin-left: 20px; border-radius: 20px;height: 40px;width: 80px;">Update</button></a>
+               <a href="/delete/{{i.id}}"> <button class="b" type="button" style="margin-top: 50px; margin-left: 25px; border-radius: 20px;height: 40px;width: 80px;" >
+                Delete</button>
+               </a>
+            </div>
+        
+        </div>
+       
+        <br>
+
+        {%endfor%}
+       
+        {%endblock%}

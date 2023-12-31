@@ -1,0 +1,48 @@
+{%extends 'happ/admaster.html'%}
+
+{%block title%}
+adreview
+
+{%endblock%}
+
+{%block text%}
+<div style="height: 100%;width: 100%;background-repeat: no-repeat; background-size: cover;background-image: url(https://tse3.mm.bing.net/th?id=OIP.2zZM7w_vQI0W2S1Xmc6FsgHaE7&pid=Api&P=0&h=180);">
+
+
+<table style="margin-left: 200px;margin-top: 100px;">
+    <thead>
+        <tr style="width: 100px;">
+            <th style="width: 300px;">Name</th>
+            <th style="width: 300px;">Emaill</th>
+            <th style="width: 300px;">Comments</th>
+
+        
+        </tr>
+        <tbody>
+            <tr><td></td><td></td><td></td></tr>
+            {%for i in d%}
+            <tr>
+                <td style="text-align: center;">{{i.n}}</td>
+                <td>{{i.email}}</td>
+                <td><{{i.comment}}</td>
+                <td><a href="mailto:{{i.email}}"><button type="submit" style="background-color: blueviolet;" class="b2">Respond</button></a>
+                  <a href="/addelete/{{i.id}}" > <button type="button" style="background-color: blueviolet;width: 69px;margin-top: 2px;" class="b2">Delete</button></a>
+                </td>
+                
+            </tr>
+            {%endfor%}
+        </tbody>
+    </thead>
+
+</table>
+
+
+<!-- <script>
+    d=document.getElementById("i")
+    function fun(){
+        if 
+    }
+
+</script> -->
+</div>
+{%endblock%}
